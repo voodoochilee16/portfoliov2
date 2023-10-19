@@ -3,10 +3,11 @@
   import { ContactShadows, Float, Grid, OrbitControls } from '@threlte/extras'
 </script>
 
+
 <T.PerspectiveCamera
   makeDefault
-  position={[-10, 10, 10]}
-  fov={15}
+  position={[-25, 10, 10]}
+  fov={25}
 >
   <OrbitControls
     autoRotate
@@ -29,8 +30,8 @@
   cellColor="#ffffff"
   sectionColor="#ffffff"
   sectionThickness={0}
-  fadeDistance={25}
-  cellSize={2}
+  fadeDistance={35}
+  cellSize={1}
 />
 
 <ContactShadows
@@ -40,6 +41,9 @@
   opacity={0.5}
 />
 
+
+
+<!-- BLUE CUBE -->
 <Float
   floatIntensity={1}
   floatingRange={[0, 1]}
@@ -48,11 +52,14 @@
     position.y={1.2}
     position.z={-0.75}
   >
-    <T.BoxGeometry />
+    <T.SphereGeometry />
     <T.MeshStandardMaterial color="#0059BA" />
   </T.Mesh>
 </Float>
 
+
+
+<!-- WEIRD SNAKE -->
 <Float
   floatIntensity={1}
   floatingRange={[0, 1]}
@@ -62,11 +69,13 @@
     rotation.x={5}
     rotation.y={71}
   >
-    <T.TorusKnotGeometry args={[0.5, 0.15, 100, 12, 2, 3]} />
+    <T.SphereGeometry args={[0.5, 0.15, 100, 12, 2, 3]} />
     <T.MeshStandardMaterial color="#F85122" />
   </T.Mesh>
 </Float>
 
+
+<!-- POLYGON -->
 <Float
   floatIntensity={1}
   floatingRange={[0, 1]}
@@ -75,7 +84,7 @@
     position={[-1.4, 1.5, 0.75]}
     rotation={[-5, 128, 10]}
   >
-    <T.IcosahedronGeometry />
+    <T.SphereGeometry />
     <T.MeshStandardMaterial color="#F8EBCE" />
   </T.Mesh>
 </Float>

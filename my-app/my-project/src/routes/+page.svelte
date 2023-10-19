@@ -1,8 +1,10 @@
 <script>
   import App from '$lib/components/App.svelte'
+	import Nav from '$lib/components/site_components/Nav.svelte';
 </script>
 
 <div>
+  <Nav></Nav>
   <App />
 </div>
 
@@ -14,7 +16,7 @@
   div {
     width: 100vw;
     height: 100vh;
-    background: rgb(13, 19, 32);
-    background: linear-gradient(180deg, rgba(13, 19, 32, 1) 0%, rgba(8, 12, 21, 1) 100%);
+    background: black
+    /* background: linear-gradient(180deg, rgba(13, 19, 32, 1) 0%, rgba(8, 12, 21, 1) 100%); */
   }
 </style>
