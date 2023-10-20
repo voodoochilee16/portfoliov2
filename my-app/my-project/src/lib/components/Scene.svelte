@@ -10,11 +10,14 @@
     starScale,
   } from '$lib/components/state'
 
+  function getRandomHexColor() {
+    return '#' + Math.floor(Math.random()*16777215).toString(16);
+}
 </script>
 
 <T.PerspectiveCamera
   makeDefault
-  position={[0, 1, 12]}
+  position={[3500, 1, 12]}
   fov={65}
   far={3000}
 >
@@ -37,6 +40,6 @@
   count={$count}
   innerRadius={$innerRadius}
   outerRadius={$outerRadius}
-  color={$color}
+  color={getRandomHexColor()}
   starScale={$starScale}
 />
