@@ -37,6 +37,6 @@
   count={$count}
   innerRadius={$innerRadius}
   outerRadius={$outerRadius}
-  
+  color={$color}
   starScale={$starScale}
 />
