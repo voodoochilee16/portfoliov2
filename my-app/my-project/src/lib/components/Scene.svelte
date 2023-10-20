@@ -1,7 +1,7 @@
 <script>
   import { T } from '@threlte/core'
   import { Float, OrbitControls } from '@threlte/extras'
-  import StarField from '$lib/components/StarField.svelte'
+  import StarField from '$lib/components/starfield.svelte'
   import {
     count,
     color,
