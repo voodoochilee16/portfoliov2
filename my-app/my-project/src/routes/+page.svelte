@@ -1,22 +1,33 @@
 <script>
-  import App from '$lib/components/App.svelte'
-	import Nav from '$lib/components/site_components/Nav.svelte';
+  import { Canvas } from '@threlte/core'
+  import { World } from '@threlte/rapier'
+  
+  import Scene from '$lib/components/Scene.svelte'
+  import Controls from '$lib/components/Controls.svelte'
 </script>
 
-<div>
-  <Nav></Nav>
-  <App />
+<div class="canvas-wrapper">
+  <Canvas>
+    <World>
+      <Scene />
+    </World>
+  </Canvas>
+  
 </div>
 
 <style>
-  :global(body) {
-    margin: 0;
+  .canvas-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000000;
   }
 
-  div {
-    width: 100vw;
-    height: 100vh;
-    background: black
-    /* background: linear-gradient(180deg, rgba(13, 19, 32, 1) 0%, rgba(8, 12, 21, 1) 100%); */
+  .controls-wrapper {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.75rem;
+    background-color: #00000088;
   }
 </style>

@@ -1,90 +1,42 @@
 <script>
   import { T } from '@threlte/core'
-  import { ContactShadows, Float, Grid, OrbitControls } from '@threlte/extras'
-</script>
+  import { Float, OrbitControls } from '@threlte/extras'
+  import StarField from '$lib/components/StarField.svelte'
+  import {
+    count,
+    color,
+    innerRadius,
+    outerRadius,
+    starScale,
+  } from '$lib/components/state'
 
+</script>
 
 <T.PerspectiveCamera
   makeDefault
-  position={[-25, 10, 10]}
-  fov={25}
+  position={[0, 1, 12]}
+  fov={65}
+  far={3000}
 >
-  <OrbitControls
-    autoRotate
-    enableZoom={false}
-    enableDamping
-    autoRotateSpeed={0.5}
-    target.y={1.5}
-  />
+  <OrbitControls />
 </T.PerspectiveCamera>
+<T.DirectionalLight position={[3, 2, 1]} intensity={0.875}/>
+<T.HemisphereLight color="#00bfff" groundColor="orangered"/>
 
-<T.DirectionalLight
-  intensity={0.8}
-  position.x={5}
-  position.y={10}
+<T.Mesh>
+  <T.SphereGeometry args={[1, 64, 64]}/>
+  <T.MeshStandardMaterial 
+    color="#ccffff" 
+    metalness={0.2} 
+    roughness={0.1} 
+  />
+</T.Mesh>
+
+
+<StarField
+  count={$count}
+  innerRadius={$innerRadius}
+  outerRadius={$outerRadius}
+  
+  starScale={$starScale}
 />
-<T.AmbientLight intensity={0.2} />
-
-<Grid
-  position.y={-0.001}
-  cellColor="#ffffff"
-  sectionColor="#ffffff"
-  sectionThickness={0}
-  fadeDistance={35}
-  cellSize={1}
-/>
-
-<ContactShadows
-  scale={10}
-  blur={2}
-  far={2.5}
-  opacity={0.5}
-/>
-
-
-
-<!-- BLUE CUBE -->
-<Float
-  floatIntensity={1}
-  floatingRange={[0, 1]}
->
-  <T.Mesh
-    position.y={1.2}
-    position.z={-0.75}
-  >
-    <T.SphereGeometry />
-    <T.MeshStandardMaterial color="#0059BA" />
-  </T.Mesh>
-</Float>
-
-
-
-<!-- WEIRD SNAKE -->
-<Float
-  floatIntensity={1}
-  floatingRange={[0, 1]}
->
-  <T.Mesh
-    position={[1.2, 1.5, 0.75]}
-    rotation.x={5}
-    rotation.y={71}
-  >
-    <T.SphereGeometry args={[0.5, 0.15, 100, 12, 2, 3]} />
-    <T.MeshStandardMaterial color="#F85122" />
-  </T.Mesh>
-</Float>
-
-
-<!-- POLYGON -->
-<Float
-  floatIntensity={1}
-  floatingRange={[0, 1]}
->
-  <T.Mesh
-    position={[-1.4, 1.5, 0.75]}
-    rotation={[-5, 128, 10]}
-  >
-    <T.SphereGeometry />
-    <T.MeshStandardMaterial color="#F8EBCE" />
-  </T.Mesh>
-</Float>
