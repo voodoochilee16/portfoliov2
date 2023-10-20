@@ -43,8 +43,11 @@ function getRandomNumber() {
 </script>
 <Float
 	position={[0, 0, 0]}
-	rotation={[5, 5, 5]}
-	scale={[5, 5, 5]}
+	rotation={[3, 3, 3]}
+	scale={[3, 3, 3]}
+	floatingRange={[-0.5, 0.5]}
+	rotationIntensity={0.003}
+
 >
 	<T is={instMesh} />
 </Float>

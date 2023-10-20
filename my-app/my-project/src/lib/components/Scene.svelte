@@ -26,14 +26,14 @@
 <T.DirectionalLight position={[3, 2, 1]} intensity={0.875}/>
 <T.HemisphereLight color="#00bfff" groundColor="orangered"/>
 
-<T.Mesh>
-  <T.SphereGeometry args={[1, 64, 64]}/>
-  <T.MeshStandardMaterial 
-    color="#ccffff" 
-    metalness={0.2} 
-    roughness={0.1} 
-  />
-</T.Mesh>
+  <T.Mesh>
+    <T.SphereGeometry args={[1, 64, 64]}/>
+    <T.MeshStandardMaterial
+      color="#ccffff"
+      metalness={0.2}
+      roughness={0.1}
+    />
+  </T.Mesh>
 
 
 <StarField
