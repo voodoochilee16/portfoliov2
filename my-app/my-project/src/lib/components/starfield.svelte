@@ -11,10 +11,10 @@ function getRandomNumber() {
     return Math.floor(Math.random() * (1000 - 100) + 100);
 }
 	export let count = 15000;
-	export let innerRadius = 1000;
-	export let outerRadius = 1000;
+	export let innerRadius = 200;
+	export let outerRadius = 200;
 	export let color = getRandomHexColor();
-	export let starScale = 0.5;
+	export let starScale = 0.1;
 
 
 	const vec3OnSphere = (range) => {
@@ -46,7 +46,7 @@ function getRandomNumber() {
 	rotation={[3, 3, 3]}
 	scale={[3, 3, 3]}
 	floatingRange={[-0.5, 0.5]}
-	rotationIntensity={0.003}
+	rotationIntensity={0.02}
 
 >
 	<T is={instMesh} />
