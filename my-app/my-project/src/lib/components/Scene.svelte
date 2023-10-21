@@ -22,7 +22,7 @@ let dn = Date.now()
 
 <T.PerspectiveCamera
   makeDefault
-  position={[0, 100, 8000]}
+  position={[4000, 4000, 8000]}
   fov={50}
   far={3500}
 >

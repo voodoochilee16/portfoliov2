@@ -38,3 +38,4 @@ You can preview the production build with `npm run preview`.
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
 
 https://stackblitz.com/edit/demo-starfield?file=src%2Flib%2FScene.svelte
+lll
