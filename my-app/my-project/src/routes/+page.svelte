@@ -23,9 +23,10 @@ function handleMouseMove(event) {
       import('webgl-fluid-enhanced').then(({ default: webGLFluidEnhanced }) => {
         webGLFluidEnhanced.splats();
         webGLFluidEnhanced.simulation(canvasRef, {
-          SIM_RESOLUTION: 256,
-          VELOCITY_DISSIPATION: 0.29,
+          SIM_RESOLUTION: 512,
+          VELOCITY_DISSIPATION: 0.0,
           COLOR_PALETTE: ["#FF0000", "#FF7F00", "#FFFF00", "#00FF00", "#0000FF", "#4B0082", "#8B00FF"],
+ 
         });
       });
     });
@@ -51,12 +52,12 @@ function handleMouseMove(event) {
     <Nav />
 	<div class="grid grid-cols-2 gap-8 justify-center">
 		<div class="col1 flex flex-col items-center">
-			<button on:click={showWork}>
-				<h1 class="font-os text-xl font-bold text-white">Work</h1>
+			<button class="border-2 border-white rounded-lg px-4 sm:px-6 sm:py-3 sm:w-40" on:click={showWork}>
+				<h1 class="font-os text-lg sm:text-xl font-bold text-white">Work</h1>
 				
 			</button>
 			{#if isWorkShow}
-				<div class="flex flex-col items-center justify-center space-y-3 mt-3" transition:fade={{ delay: 250, duration: 700 }}>
+				<div class="flex flex-col text-center items-center justify-center space-y-3 mt-3" transition:fade={{ delay: 250, duration: 700 }}>
 					<a href="https://www.portodesignbiennale.pt/">Porto Design Biennale</a>
 					<a href="https://www.bluedesignalliance.pt/">Blue Design Alliance </a>
 				</div>
@@ -64,11 +65,11 @@ function handleMouseMove(event) {
 			
 		</div>
 		<div class="col2 flex flex-col items-center">
-			<button on:click={showMusic}>
-				<h1 class="font-os text-xl font-bold text-white">Music</h1>
+			<button class="border-2 border-white rounded-lg px-4 sm:px-6 sm:py-3 sm:w-40" on:click={showMusic}>
+				<h1 class="font-os text-lg sm:text-xl  font-bold text-white">Music</h1>
 			</button>
 			{#if isMusicShow}
-				<div class="flex flex-col items-center justify-center space-y-3 mt-3" transition:fade={{ delay: 250, duration: 700 }}>
+				<div class="flex flex-col text-center items-center justify-center space-y-3 mt-3" transition:fade={{ delay: 250, duration: 700 }}>
 					<a href="https://theblackwizards.bandcamp.com/album/reflections">Reflections</a>
 					<a href="https://theblackwizards.bandcamp.com/album/what-the-fuzz">What the Fuzz!</a>
 					<a href="https://theblackwizards.bandcamp.com/album/lake-of-fire">Lake of Fire</a>
@@ -84,7 +85,6 @@ function handleMouseMove(event) {
 
 
 
-  <div>HEllo</div>
 
 
 <style lang="postcss">
@@ -96,9 +96,7 @@ function handleMouseMove(event) {
 		
 	}
 
-	button {
-		@apply border-2 border-white rounded-lg px-6 py-3 w-40; 
-	}
+	
 	/* .canvas-wrapper {
 		position: absolute;
 		width: 100%;
