@@ -29,6 +29,12 @@ function handleMouseMove(event) {
  
         });
       });
+	  const intervalId = setInterval(() => {
+        const event = new KeyboardEvent('keydown', { key: ' ' });
+        window.dispatchEvent(event);
+    }, 6000);
+
+    return () => clearInterval(intervalId); 
     });
 
 	
@@ -56,25 +62,25 @@ function handleMouseMove(event) {
 				<h1 class="font-os text-lg sm:text-xl font-bold text-white">Work</h1>
 				
 			</button>
-			{#if isWorkShow}
+			<!-- {#if isWorkShow}
 				<div class="flex flex-col text-center items-center justify-center space-y-3 mt-3" transition:fade={{ delay: 250, duration: 700 }}>
 					<a href="https://www.portodesignbiennale.pt/">Porto Design Biennale</a>
 					<a href="https://www.bluedesignalliance.pt/">Blue Design Alliance </a>
 				</div>
-			{/if}
+			{/if} -->
 			
 		</div>
 		<div class="col2 flex flex-col items-center">
 			<button class="border-2 border-white rounded-lg px-4 sm:px-6 sm:py-3 sm:w-40" on:click={showMusic}>
 				<h1 class="font-os text-lg sm:text-xl  font-bold text-white">Music</h1>
 			</button>
-			{#if isMusicShow}
+			<!-- {#if isMusicShow}
 				<div class="flex flex-col text-center items-center justify-center space-y-3 mt-3" transition:fade={{ delay: 250, duration: 700 }}>
 					<a href="https://theblackwizards.bandcamp.com/album/reflections">Reflections</a>
 					<a href="https://theblackwizards.bandcamp.com/album/what-the-fuzz">What the Fuzz!</a>
 					<a href="https://theblackwizards.bandcamp.com/album/lake-of-fire">Lake of Fire</a>
 				</div>
-			{/if}
+			{/if} -->
 		</div>
 	</div>
   </main>
