@@ -10,7 +10,7 @@
 function getRandomNumber() {
     return Math.floor(Math.random() * (1000 - 100) + 100);
 }
-	export let count = 15000;
+	export let count = 20000;
 	export let innerRadius = 200;
 	export let outerRadius = 200;
 	export let color = getRandomHexColor();
@@ -45,8 +45,8 @@ function getRandomNumber() {
 	position={[0, 0, 0]}
 	rotation={[3, 3, 3]}
 	scale={[3, 3, 3]}
-	floatingRange={[-0.5, 0.5]}
-	rotationIntensity={0.02}
+	floatingRange={[-0.2, 0.2]}
+	rotationIntensity={0.01}
 
 >
 	<T is={instMesh} />

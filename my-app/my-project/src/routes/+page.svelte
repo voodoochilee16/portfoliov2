@@ -59,7 +59,9 @@ function handleMouseMove(event) {
 	<div class="grid grid-cols-2 gap-8 justify-center">
 		<div class="col1 flex flex-col items-center">
 			<button class="border-2 border-white rounded-lg px-4 sm:px-6 sm:py-3 sm:w-40" on:click={showWork}>
-				<h1 class="font-os text-lg sm:text-xl font-bold text-white">Work</h1>
+				<a href="/work">
+					<h1 class="font-os text-lg sm:text-xl font-bold text-white">Work</h1>
+				</a>
 				
 			</button>
 			<!-- {#if isWorkShow}
@@ -72,7 +74,9 @@ function handleMouseMove(event) {
 		</div>
 		<div class="col2 flex flex-col items-center">
 			<button class="border-2 border-white rounded-lg px-4 sm:px-6 sm:py-3 sm:w-40" on:click={showMusic}>
-				<h1 class="font-os text-lg sm:text-xl  font-bold text-white">Music</h1>
+				<a href="/music">
+					<h1 class="font-os text-lg sm:text-xl  font-bold text-white">Music</h1>
+				</a>
 			</button>
 			<!-- {#if isMusicShow}
 				<div class="flex flex-col text-center items-center justify-center space-y-3 mt-3" transition:fade={{ delay: 250, duration: 700 }}>
