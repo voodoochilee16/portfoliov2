@@ -1,43 +1,39 @@
-
-
 <script>
 	// 	import { Canvas } from '@threlte/core';
 	// import { World } from '@threlte/rapier';
 
 	// import Scene from '$lib/components/Scene.svelte';
 	import Nav from '$lib/components/site_components/Nav.svelte';
-    import { onDestroy, onMount } from 'svelte';
+	import { onDestroy, onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
-  
-    let canvasRef;
-  
+
+	let canvasRef;
+
 	let mouseX = 0;
-let mouseY = 0;
+	let mouseY = 0;
 
-function handleMouseMove(event) {
-    mouseX = event.clientX;
-    mouseY = event.clientY;
-    // You can now use mouseX and mouseY in your simulation
-}
-    onMount(() => {
-      import('webgl-fluid-enhanced').then(({ default: webGLFluidEnhanced }) => {
-        webGLFluidEnhanced.splats();
-        webGLFluidEnhanced.simulation(canvasRef, {
-          SIM_RESOLUTION: 512,
-          VELOCITY_DISSIPATION: 0.0,
-          COLOR_PALETTE: ["#FF0000", "#FF7F00", "#FFFF00", "#00FF00", "#0000FF", "#4B0082", "#8B00FF"],
- 
-        });
-      });
-	  const intervalId = setInterval(() => {
-        const event = new KeyboardEvent('keydown', { key: ' ' });
-        window.dispatchEvent(event);
-    }, 6000);
+	function handleMouseMove(event) {
+		mouseX = event.clientX;
+		mouseY = event.clientY;
+		// You can now use mouseX and mouseY in your simulation
+	}
+	onMount(() => {
+		import('webgl-fluid-enhanced').then(({ default: webGLFluidEnhanced }) => {
+			webGLFluidEnhanced.splats();
+			webGLFluidEnhanced.simulation(canvasRef, {
+				SIM_RESOLUTION: 512,
+				VELOCITY_DISSIPATION: 0.0,
+				COLOR_PALETTE: ['#FF0000', '#FF7F00', '#FFFF00', '#00FF00', '#0000FF', '#4B0082', '#8B00FF']
+			});
+		});
+		const intervalId = setInterval(() => {
+			const event = new KeyboardEvent('keydown', { key: ' ' });
+			window.dispatchEvent(event);
+		}, 6000);
 
-    return () => clearInterval(intervalId); 
-    });
+		return () => clearInterval(intervalId);
+	});
 
-	
 	let isWorkShow = false;
 	let isMusicShow = false;
 
@@ -48,21 +44,24 @@ function handleMouseMove(event) {
 	function showMusic() {
 		isMusicShow = !isMusicShow;
 	}
+</script>
 
-	
-  </script>
+<canvas on:mousemove={handleMouseMove} bind:this={canvasRef} class="fixed w-[100vw] h-[100vh]" />
 
-  <canvas on:mousemove={handleMouseMove}  bind:this={canvasRef} class="fixed w-[100vw] h-[100vh]"/>
-
-  <main  class="relative z-10 flex flex-col items-center justify-center h-min" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);"> 
-    <Nav />
+<main
+	class="relative z-10 flex flex-col items-center justify-center h-min"
+	style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);"
+>
+	<Nav />
 	<div class="grid grid-cols-2 gap-8 justify-center">
 		<div class="col1 flex flex-col items-center">
-			<button class="border-2 border-white rounded-lg px-4 sm:px-6 sm:py-3 sm:w-40" on:click={showWork}>
+			<button
+				class="border-2 border-sabbath rounded-lg px-4 sm:px-6 sm:py-3 sm:w-40"
+				on:click={showWork}
+			>
 				<a href="/work">
 					<h1 class="font-os text-lg sm:text-xl font-bold text-white">Work</h1>
 				</a>
-				
 			</button>
 			<!-- {#if isWorkShow}
 				<div class="flex flex-col text-center items-center justify-center space-y-3 mt-3" transition:fade={{ delay: 250, duration: 700 }}>
@@ -70,12 +69,14 @@ function handleMouseMove(event) {
 					<a href="https://www.bluedesignalliance.pt/">Blue Design Alliance </a>
 				</div>
 			{/if} -->
-			
 		</div>
 		<div class="col2 flex flex-col items-center">
-			<button class="border-2 border-white rounded-lg px-4 sm:px-6 sm:py-3 sm:w-40" on:click={showMusic}>
+			<button
+				class="border-2 border-sabbath rounded-lg px-4 sm:px-6 sm:py-3 sm:w-40"
+				on:click={showMusic}
+			>
 				<a href="/music">
-					<h1 class="font-os text-lg sm:text-xl  font-bold text-white">Music</h1>
+					<h1 class="font-os text-lg sm:text-xl font-bold text-white">Music</h1>
 				</a>
 			</button>
 			<!-- {#if isMusicShow}
@@ -87,15 +88,7 @@ function handleMouseMove(event) {
 			{/if} -->
 		</div>
 	</div>
-  </main>
-
-
-
-    
-
-
-
-
+</main>
 
 <style lang="postcss">
 	a {
@@ -103,10 +96,8 @@ function handleMouseMove(event) {
 	}
 	p {
 		@apply text-white font-os;
-		
 	}
 
-	
 	/* .canvas-wrapper {
 		position: absolute;
 		width: 100%;

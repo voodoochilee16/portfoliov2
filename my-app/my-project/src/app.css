@@ -3,3 +3,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+	.page_container {
+		@apply px-6 md:px-8 text-white font-khu text-xs sm:text-base lg:text-lg;
+	}
+}
