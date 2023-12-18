@@ -13,9 +13,12 @@
 			</div>
 		</a>
 	</div>
-	<div class="nav__links flex justify-between items-center space-x-5">
+	<div class="nav__links flex justify-center items-center space-x-5">
 		<a href="/work">
 			<h1 class="font-os sm:text-xl lg:text-2xl text-white">Work</h1>
+		</a>
+		<a href="/music">
+			<h1 class="font-os sm:text-xl lg:text-2xl text-white">Music</h1>
 		</a>
 		<a href="/music">
 			<h1 class="font-os sm:text-xl lg:text-2xl text-white">Music</h1>

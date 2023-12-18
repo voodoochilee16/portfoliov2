@@ -6,7 +6,7 @@ import client from '$lib/clients/directusClient';
 export const load: PageServerLoad = async (params) => {
 	const projects = await client.request(
 		readItems('voodoo_projects', {
-			fields: ['id, title, desc, slug, cover']
+			fields: ['id, title, desc, slug, cover, categorie']
 		})
 	);
 
