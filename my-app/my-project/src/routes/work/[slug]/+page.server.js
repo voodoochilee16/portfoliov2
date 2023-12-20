@@ -10,7 +10,14 @@ export async function load(params) {
 				filter: {
 					slug: slug
 				},
-				fields: ['*.*', 'images.*.*', 'tags.*.*']
+				fields: [
+					'*.*',
+					'images.*.*',
+					'tags.*.*',
+					{
+						seo: ['title', 'meta_description', 'no_index', 'no_follow']
+					}
+				]
 			})
 		);
 		return data;
