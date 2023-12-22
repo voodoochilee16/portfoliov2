@@ -3,7 +3,7 @@
 	import FaExternalLinkAlt from 'svelte-icons/fa/FaExternalLinkAlt.svelte';
 </script>
 
-<div class="project_container flex flex-col space-y-10 py-10 items-center justify-center">
+<div class="flex flex-col space-y-10 py-10 items-center justify-center">
 	<div class="flex gap-4 items-center justify-center">
 		<h1 class="text-xl font-khu font-bold"><a href={pr.external_url}>{pr.title}</a></h1>
 		<div class="icon"><FaExternalLinkAlt /></div>

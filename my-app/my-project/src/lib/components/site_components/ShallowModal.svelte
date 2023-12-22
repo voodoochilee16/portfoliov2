@@ -6,27 +6,28 @@
 	import IoIosExpand from 'svelte-icons/io/IoIosExpand.svelte';
 	import { goto } from '$app/navigation';
 	console.log($page.state);
+	let iframeLoaded = false;
 </script>
 
 <div
 	transition:fade={{ duration: 300 }}
-	class="fixed left-0 right-0 bottom-0 top-0 z-50 backdrop-blur-3xl backdrop-brightness-75 overflow-y-auto"
+	class="fixed left-0 right-0 bottom-0 top-0 z-50 backdrop-brightness-[0.5] overflow-y-auto"
 >
 	<div
 		transition:fly={{ x: 200, duration: 500 }}
-		class="fixed w-full lg:w-[85vw] backdrop-blur-3xl right-0 bottom-0 top-0 z-50 overflow-y-auto pb-20 px-10"
+		class="fixed w-full right-0 bottom-0 top-0 z-50 overflow-y-auto sm:px-10"
 	>
-		<div class="sticky top-0 backdrop-blur-3xl w-full py-4 m_container z-50 flex justify-between">
-			<button
-				class="btn btn-xs xl:btn-sm btn-outline border-sabbath"
+		<div class="sticky top-0 w-full py-4 m_container z-50 flex justify-end">
+			<!-- <button
+				class="hidden btn btn-xs xl:btn-sm btn-outline border-sabbath"
 				on:click={() => goto($page.state.selected.url)}
 			>
 				<div class="icon">
 					<IoIosExpand />
 				</div></button
-			>
+			> -->
 			<button
-				class="btn btn-xs xl:btn-sm btn-outline border-sabbath text-sabbath"
+				class="btn btn-xs xl:btn-sm btn-outline border-sabbath text-sabbath px-3 py-1 mx-3"
 				on:click={() => history.back()}>Close</button
 			>
 		</div>

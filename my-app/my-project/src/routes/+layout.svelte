@@ -10,8 +10,12 @@
 <main>
 	{#key data.url}
 		<div in:fade={{ duration: 300, delay: 200 }} out:fade={{ duration: 200 }}>
-			<FullNav />
-			<slot />
+			{#if data.url == '/'}
+				<slot />
+			{:else}
+				<FullNav />
+				<slot />
+			{/if}
 		</div>
 	{/key}
 </main>
