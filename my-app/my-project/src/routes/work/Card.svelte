@@ -21,12 +21,7 @@
 	</ShallowModal>
 {/if}
 
-<a
-	on:click={handleNavigation}
-	data-sveltekit-preload-data
-	data-sveltekit-reload
-	href="work/{pr.slug}"
->
+<a on:click={handleNavigation} data-sveltekit-preload-data href="work/{pr.slug}">
 	<div class="items-center card pt-10">
 		<div
 			class="card flex flex-col gap-5 border-sabbath border-2 rounded-lg p-4 text-center pt-10 hover:"
@@ -42,7 +37,7 @@
 			/>
 
 			<h3>
-				<button class="py-4 px-8 border border-sabbath rounded-lg text-xs lg:text-sm font-mono"
+				<button class="py-2 px-6 border border-sabbath rounded-lg text-xs lg:text-sm"
 					>{pr.categorie}</button
 				>
 			</h3>

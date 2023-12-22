@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Seo from '$lib/components/site_components/Seo.svelte';
 	import Swiper from '$lib/components/site_components/Swiper.svelte';
+	import { onMount } from 'svelte';
 	import MobileCard from './MobileCard.svelte';
 	import ProjectCard from './ProjectCard.svelte';
 

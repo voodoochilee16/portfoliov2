@@ -6,6 +6,6 @@
 
 @layer components {
 	.page_container {
-		@apply py-5 px-10 md:px-8 text-white font-khu text-xs sm:text-base lg:text-lg;
+		@apply py-5 px-12 md:px-10 text-white font-khu text-xs sm:text-base lg:text-lg;
 	}
 }

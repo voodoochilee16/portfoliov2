@@ -34,7 +34,7 @@
 <!-- svelte-ignore a11y-missing-attribute -->
 <!-- breakpoints={{ 768: { slidesPerView: 2, }, 1280:{slidesPerView: 4,} }} -->
 <swiper-container
-	autoplay-delay="3500"
+	autoplay-delay="2500"
 	slides-per-view={slidesPerView}
 	space-between="16"
 	speed="500"
