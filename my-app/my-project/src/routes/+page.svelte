@@ -5,7 +5,6 @@
 	// import Scene from '$lib/components/Scene.svelte';
 	import Nav from '$lib/components/site_components/Nav.svelte';
 	import { onDestroy, onMount } from 'svelte';
-	import { fade } from 'svelte/transition';
 
 	let canvasRef;
 

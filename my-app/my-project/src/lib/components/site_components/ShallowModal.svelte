@@ -9,21 +9,16 @@
 	let iframeLoaded = false;
 </script>
 
-<div class="mockup-browser border border-base-300">
-	<div class="mockup-browser-toolbar">
-		<div class="input border border-base-300">https://daisyui.com</div>
-	</div>
-	<div class="flex justify-center px-4 py-16 border-t border-base-300">
-		<div
-			transition:fade={{ duration: 300 }}
-			class="fixed left-0 right-0 bottom-0 top-0 z-50 backdrop-brightness-[0.5] overflow-y-auto"
-		>
-			<div
-				transition:fly={{ x: 200, duration: 500 }}
-				class="fixed w-full right-0 bottom-0 top-0 z-50 overflow-y-auto sm:px-10"
-			>
-				<div class="sticky top-0 w-full py-4 m_container z-50 flex justify-end">
-					<!-- <button
+<div
+	transition:fade={{ duration: 300 }}
+	class="fixed left-0 right-0 bottom-0 top-0 z-50 backdrop-brightness-[0.5] overflow-y-auto"
+>
+	<div
+		transition:fly={{ x: 200, duration: 500 }}
+		class="fixed w-full right-0 bottom-0 top-0 z-50 overflow-y-auto sm:px-10"
+	>
+		<div class="sticky top-0 w-full py-4 m_container z-50 flex justify-end">
+			<!-- <button
 				class="hidden btn btn-xs xl:btn-sm btn-outline border-sabbath"
 				on:click={() => goto($page.state.selected.url)}
 			>
@@ -31,17 +26,15 @@
 					<IoIosExpand />
 				</div></button
 			> -->
-					<button
-						class="btn btn-xs xl:btn-sm btn-outline border-sabbath text-sabbath px-3 py-1 mx-3"
-						on:click={() => history.back()}>Close</button
-					>
-				</div>
-
-				<slot name="page">Content</slot>
-
-				<!-- <EventPage data={$page.state.selected} /> -->
-			</div>
+			<button
+				class="btn btn-xs xl:btn-sm btn-outline border-sabbath text-sabbath px-3 py-1 mx-3"
+				on:click={() => history.back()}>Close</button
+			>
 		</div>
+
+		<slot name="page">Content</slot>
+
+		<!-- <EventPage data={$page.state.selected} /> -->
 	</div>
 </div>
 

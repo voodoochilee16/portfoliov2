@@ -18,23 +18,16 @@
 
 <Seo {pr} />
 
-<div class="mockup-browser border border-sabbath">
-	<div class="mockup-browser-toolbar">
-		<div class="input border border-sabbath"><a href={pr.external_url}>{pr.external_url}</a></div>
-	</div>
-	<div class="flex justify-center px-4 py-16 border-t border-sabbath">
-		<main class=" py-10 page_container">
-			<div class="grid grid-cols-1 lg:grid-cols-2">
-				<div class="left hidden lg:block">
-					<ProjectCard {pr}></ProjectCard>
-				</div>
-				<div class="right">
-					<Swiper slidesPerView={slides} files={gallery} />
-					<div class="mobile lg:hidden">
-						<MobileCard {pr} />
-					</div>
-				</div>
+<main class="my-20 py-10 page_container">
+	<div class="grid grid-cols-1 lg:grid-cols-2">
+		<div class="left hidden lg:block">
+			<ProjectCard {pr}></ProjectCard>
+		</div>
+		<div class="right">
+			<Swiper slidesPerView={slides} files={gallery} />
+			<div class="mobile lg:hidden">
+				<MobileCard {pr} />
 			</div>
-		</main>
+		</div>
 	</div>
-</div>
+</main>

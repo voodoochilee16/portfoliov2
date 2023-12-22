@@ -36,7 +36,7 @@
 		</g>
 	</g>
 </svg>
-
+0 
 <style>
 	.rotate {
 		animation: rotation 10s infinite linear;
