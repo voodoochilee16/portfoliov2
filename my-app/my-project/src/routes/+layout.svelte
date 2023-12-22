@@ -5,6 +5,7 @@
 	import { fade, fly } from 'svelte/transition';
 	console.log($page);
 	export let data;
+	let my_modal_5;
 </script>
 
 <main>
@@ -15,6 +16,7 @@
 			{:else}
 				<FullNav />
 				<slot />
+				<!-- Open the modal using ID.showModal() method -->
 			{/if}
 		</div>
 	{/key}

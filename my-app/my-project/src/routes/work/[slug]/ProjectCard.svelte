@@ -15,13 +15,13 @@
 
 	<div class="tags flex justify-center items-center gap-4">
 		{#each pr.tags as tag}
-			<button class="btn btn-sm btn-ghost border-sabbath hover:btn-success">{tag}</button>
+			<button class="btn btn-sm btn-ghost border-sabbath">{tag}</button>
 		{/each}
 	</div>
 
-	<div class="icon">
+	<!-- <div class="icon">
 		<FaExternalLinkAlt />
-	</div>
+	</div> -->
 </div>
 
 <style>
