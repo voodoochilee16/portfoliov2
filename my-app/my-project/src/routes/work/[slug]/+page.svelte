@@ -17,14 +17,14 @@
 
 <Seo {pr} />
 
-<main class="page_container py-10">
+<main class=" py-10 page_container">
 	<div class="grid grid-cols-1 lg:grid-cols-2">
-		<div class="left hidden lg:block page_container">
+		<div class="left hidden lg:block">
 			<ProjectCard {pr}></ProjectCard>
 		</div>
-		<div class="right page_container">
+		<div class="right">
 			<Swiper slidesPerView={slides} files={gallery} />
-			<div class="mobile lg:hidden page_container">
+			<div class="mobile lg:hidden">
 				<MobileCard {pr} />
 			</div>
 		</div>

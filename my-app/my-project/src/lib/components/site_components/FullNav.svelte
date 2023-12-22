@@ -3,9 +3,10 @@
 	import IoLogoLinkedin from 'svelte-icons/io/IoLogoLinkedin.svelte';
 	import FaDiscord from 'svelte-icons/fa/FaDiscord.svelte';
 	import TiHomeOutline from 'svelte-icons/ti/TiHomeOutline.svelte';
+	import Vinyl from '$lib/Icons/Vinyl.svelte';
 </script>
 
-<div class="nav flex justify-between px-4 py-4 bg-transparent">
+<div class="hidden nav sm:flex justify-between px-4 py-4 bg-transparent">
 	<div class="nav__logo">
 		<a href="/">
 			<div class="icon">
@@ -45,6 +46,10 @@
 			</a>
 		</div>
 	</div>
+</div>
+
+<div class="mobile sm:hidden fixed right-0 mx-2 my-2">
+	<Vinyl />
 </div>
 
 <!-- <script>
