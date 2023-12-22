@@ -1,6 +1,12 @@
 import client from '$lib/clients/directusClient';
 import { readItem, readItems } from '@directus/sdk';
 
+export const config = {
+	isr: {
+		expiration: 1000
+	}
+};
+
 /** @type {import('./$types').PageServerLoad} */
 export async function load(params) {
 	const slug = params.params.slug;
