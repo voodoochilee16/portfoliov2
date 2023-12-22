@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { PUBLIC_DIRECTUS_ASSETS } from '$env/static/public';
 	import { onMount } from 'svelte';
 
@@ -35,8 +35,6 @@
 <!-- breakpoints={{ 768: { slidesPerView: 2, }, 1280:{slidesPerView: 4,} }} -->
 <swiper-container
 	autoplay-delay="2500"
-	loop="true"
-	class=" w-full rounded-lg overflow-hidden"
 	slides-per-view={slidesPerView}
 	space-between="16"
 	speed="500"

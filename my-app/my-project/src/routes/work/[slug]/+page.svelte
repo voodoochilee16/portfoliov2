@@ -15,10 +15,6 @@
 
 <Seo {pr} />
 
-<!-- <svelte:head>
-	<title>{pr.seo.title}</title>
-	<meta name="description" content={pr.seo.meta_description} />
-</svelte:head> -->
 <main class="page_container py-10">
 	<div class="grid grid-cols-1 lg:grid-cols-2">
 		<div class="left hidden lg:block page_container">hidden</div>
