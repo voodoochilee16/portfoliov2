@@ -6,7 +6,7 @@
 	import Vinyl from '$lib/Icons/Vinyl.svelte';
 </script>
 
-<div class="hidden nav sm:flex justify-between px-4 py-4 bg-transparent">
+<div class="hidden nav sm:flex justify-between px-10 py-6 bg-transparent">
 	<div class="nav__logo">
 		<a href="/">
 			<div class="icon">
@@ -48,7 +48,7 @@
 	</div>
 </div>
 
-<div class="mobile sm:hidden fixed right-0 mx-2 my-2">
+<div class="mobile sm:hidden fixed right-0 mx-4 my-4">
 	<Vinyl />
 </div>
 
