@@ -16,17 +16,17 @@
 
 	// export let buttonId = "1"
 	onMount(() => {
-		const swiper = document.querySelector('#swiper');
+		const swiper = document.querySelector('swiper');
 		const buttonNext = document.querySelector('#slider_next');
 		const buttonBack = document.querySelector('#slider_back');
 
-		buttonNext.addEventListener('click', () => {
-			swiper.swiper.slideNext();
-		});
+		// buttonNext.addEventListener('click', () => {
+		// 	swiper.swiper.slideNext();
+		// });
 
-		buttonBack.addEventListener('click', () => {
-			swiper.swiper.slidePrev();
-		});
+		// buttonBack.addEventListener('click', () => {
+		// 	swiper.swiper.slidePrev();
+		// });
 	});
 	// console.log(files);
 </script>
@@ -53,20 +53,18 @@
 	{/each}
 </swiper-container>
 
-<div class="flex justify-center w-full py-2 gap-2">
+<!-- <div class="flex justify-center w-full py-2 gap-2">
 	<button class="btn btn-sm btn-ghost flex items-center" id="slider_back">
-		<!-- <span>Prev</span> -->
 		<div class="icon">
 			<IoIosArrowRoundBack class="ml-2" />
 		</div>
 	</button>
 	<button class="btn btn-sm btn-ghost flex items-center" id="slider_next">
-		<!-- <span>Next</span> -->
 		<div class="icon">
 			<IoIosArrowRoundForward class="ml-2" />
 		</div>
 	</button>
-</div>
+</div> -->
 
 <style lang="postcss">
 	.icon {
