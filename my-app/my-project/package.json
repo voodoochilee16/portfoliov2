@@ -30,6 +30,7 @@
     "@threlte/theatre": "^2.1.5",
     "@threlte/xr": "^0.1.2",
     "autoprefixer": "^10.4.16",
+    "daisyui": "^4.4.23",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-svelte": "^2.35.1",
@@ -50,6 +51,7 @@
   "dependencies": {
     "@directus/sdk": "^13.0.2",
     "@prisma/client": "^5.7.1",
+    "@sveltejs/adapter-vercel": "^4.0.3",
     "svelte-icons": "^2.1.0",
     "swiper": "^11.0.5",
     "three-mesh-bvh": "^0.6.8",

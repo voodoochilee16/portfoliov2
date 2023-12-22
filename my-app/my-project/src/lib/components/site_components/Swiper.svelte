@@ -34,7 +34,7 @@
 <!-- svelte-ignore a11y-missing-attribute -->
 <!-- breakpoints={{ 768: { slidesPerView: 2, }, 1280:{slidesPerView: 4,} }} -->
 <swiper-container
-	autoplay-delay="2500"
+	autoplay-delay="3500"
 	slides-per-view={slidesPerView}
 	space-between="16"
 	speed="500"
@@ -54,13 +54,13 @@
 </swiper-container>
 
 <div class="flex justify-center w-full py-2 gap-2">
-	<button class="btn btn-sm btn-ghost flex items-center" id={'slider_back'}>
+	<button class="btn btn-sm btn-ghost flex items-center" id="slider_back">
 		<!-- <span>Prev</span> -->
 		<div class="icon">
 			<IoIosArrowRoundBack class="ml-2" />
 		</div>
 	</button>
-	<button class="btn btn-sm btn-ghost flex items-center" id={'slider_next'}>
+	<button class="btn btn-sm btn-ghost flex items-center" id="slider_next">
 		<!-- <span>Next</span> -->
 		<div class="icon">
 			<IoIosArrowRoundForward class="ml-2" />
