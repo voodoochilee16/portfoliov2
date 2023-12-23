@@ -4,6 +4,7 @@
 	import FaDiscord from 'svelte-icons/fa/FaDiscord.svelte';
 	import TiHomeOutline from 'svelte-icons/ti/TiHomeOutline.svelte';
 	import Vinyl from '$lib/Icons/Vinyl.svelte';
+	import SiteForm from './SiteForm.svelte';
 </script>
 
 <div class="hidden nav sm:flex justify-between px-10 py-6 bg-transparent">
@@ -44,6 +45,9 @@
 			<a href="https://github.com/voodoochilee16">
 				<GoMarkGithub />
 			</a>
+		</div>
+		<div class="icon">
+			<SiteForm />
 		</div>
 	</div>
 </div>

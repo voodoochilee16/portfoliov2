@@ -22,8 +22,8 @@
 {/if}
 
 <a on:click={handleNavigation} data-sveltekit-preload-data href="work/{pr.slug}">
-	<div class="items-center card pt-10">
-		<div class="card flex flex-col gap-5 rounded-lg p-4 text-center pt-10 hover:">
+	<div class="items-center card">
+		<div class="card flex flex-col gap-5 rounded-lg px-4 text-center hover:">
 			<a href={'work/' + pr.slug}>
 				<h1 class="text-lg md:text-xl lg:text-2xl font-extrabold font-os">{pr.title}</h1>
 			</a>

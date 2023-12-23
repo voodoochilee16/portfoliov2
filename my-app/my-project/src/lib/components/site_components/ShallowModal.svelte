@@ -11,11 +11,11 @@
 
 <div
 	transition:fade={{ duration: 300 }}
-	class="fixed left-0 right-0 bottom-0 top-0 z-50 backdrop-brightness-[0.5] overflow-y-auto"
+	class="fixed left-0 right-0 bottom-0 top-0 z-50 backdrop-brightness-[0.5]"
 >
 	<div
 		transition:fly={{ x: 200, duration: 500 }}
-		class="fixed w-full right-0 bottom-0 top-0 z-50 overflow-y-auto sm:px-10"
+		class="fixed w-full right-0 bottom-0 top-0 z-50 sm:px-10"
 	>
 		<div class="sticky top-0 w-full py-4 m_container z-50 flex justify-end">
 			<!-- <button
