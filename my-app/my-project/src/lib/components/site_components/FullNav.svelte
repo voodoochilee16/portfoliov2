@@ -23,12 +23,12 @@
 		<a href="/music">
 			<h1 class="font-os sm:text-xl lg:text-2xl text-white">Music</h1>
 		</a>
-		<a href="/music">
+		<!-- <a href="/music">
 			<h1 class="font-os sm:text-xl lg:text-2xl text-white">Notes</h1>
 		</a>
 		<a href="/music">
 			<h1 class="font-os sm:text-xl lg:text-2xl text-white">Services</h1>
-		</a>
+		</a> -->
 	</div>
 
 	<div class="nav__social flex justify-between items-center space-x-5">
