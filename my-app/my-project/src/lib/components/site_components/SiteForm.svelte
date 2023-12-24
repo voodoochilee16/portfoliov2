@@ -40,7 +40,7 @@
 	<div in:fade={{ duration: 100, delay: 100 }} out:fade={{ duration: 200 }} class="modal_text">
 		<form
 			on:submit={handleSubmit}
-			action="?/form_data"
+			action="/work?/form_data"
 			method="POST"
 			use:enhance
 			class="flex flex-col gap-4 items-center justify-center border-sabbath w-full h-full z-50 bg-opacity-80 backdrop-blur-xl fixed top-0 left-0"
