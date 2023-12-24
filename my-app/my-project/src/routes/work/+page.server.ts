@@ -1,9 +1,7 @@
 import type { PageServerLoad } from './$types';
-import { prisma } from '$lib/clients/prisma';
 import { createItem, readItem, readItems } from '@directus/sdk';
 import client from '$lib/clients/directusClient';
 import { fail } from '@sveltejs/kit';
-import { useTexture } from '@threlte/extras';
 
 export const config = {
 	isr: {
