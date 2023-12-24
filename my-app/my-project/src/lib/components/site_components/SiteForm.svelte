@@ -8,7 +8,7 @@
 	let email = '';
 	let message = '';
 
-	let isSubmitted = false; // Add this line
+	let isSubmitted = false;
 
 	export let form;
 
@@ -20,17 +20,12 @@
 		}
 
 		if (name && email && message) {
-			// setTimeout(() => {
-			// 	isSubmitted = false;
-			// }, 1000);
 			isSubmitted = true;
 			setTimeout(() => {
 				isSubmitted = false;
 			}, 2000);
 			showModal = false;
 		}
-
-		// ...rest of the form submission logic...
 	};
 </script>
 
