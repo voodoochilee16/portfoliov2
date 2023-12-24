@@ -13,8 +13,6 @@
 	export let form;
 
 	const handleSubmit = async (event) => {
-		event.preventDefault();
-
 		if (!name || !email || !message) {
 			alert('All fields are required');
 		}
