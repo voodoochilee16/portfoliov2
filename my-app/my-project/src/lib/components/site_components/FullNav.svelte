@@ -5,6 +5,7 @@
 	import TiHomeOutline from 'svelte-icons/ti/TiHomeOutline.svelte';
 	import Vinyl from '$lib/Icons/Vinyl.svelte';
 	import SiteForm from './SiteForm.svelte';
+	export let form;
 </script>
 
 <div class="hidden nav sm:flex justify-between px-10 py-6 bg-transparent">
@@ -47,7 +48,10 @@
 			</a>
 		</div>
 		<div class="icon">
-			<SiteForm />
+			{#if form?.missing}
+				<p>error</p>
+			{/if}
+			<SiteForm {form} />
 		</div>
 	</div>
 </div>

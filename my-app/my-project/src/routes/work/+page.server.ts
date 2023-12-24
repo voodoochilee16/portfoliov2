@@ -2,6 +2,8 @@ import type { PageServerLoad } from './$types';
 import { prisma } from '$lib/clients/prisma';
 import { createItem, readItem, readItems } from '@directus/sdk';
 import client from '$lib/clients/directusClient';
+import { fail } from '@sveltejs/kit';
+import { useTexture } from '@threlte/extras';
 
 export const config = {
 	isr: {
@@ -29,12 +31,14 @@ export const actions = {
 		const message = body.get('message');
 		console.log(name, email, message);
 
-		if (!name || !email || !message) {
-			return {
-				status: 400,
-				sucess: false,
-				message: 'Missing fields'
-			};
+		if (!email) {
+			return fail(400, { email, missing: true });
+		}
+		if (!name) {
+			return fail(400, { name, missing: true });
+		}
+		if (!message) {
+			return fail(400, { message, missing: true });
 		}
 		console.log(name, email, message);
 		let messages = await client.request(
@@ -47,7 +51,6 @@ export const actions = {
 		console.log(messages);
 		return {
 			messages,
-			status: 200,
 			sucess: true,
 			message: 'Message sent'
 		};
