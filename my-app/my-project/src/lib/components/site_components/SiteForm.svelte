@@ -68,9 +68,13 @@
 			<div class="flex gap-4">
 				<button class="text-base btn btn-success px-4 py-2 rounded-lg" type="submit">Submit</button>
 				<button
-					on:click={() => (showModal = !showModal)}
-					class="text-base btn btn-warning px-4 py-2 rounded-lg">X</button
+					id="close_button"
+					type="button"
+					on:click|preventDefault={() => (showModal = !showModal)}
+					class="text-base btn btn-warning px-4 py-2 rounded-lg"
 				>
+					X
+				</button>
 			</div>
 		</form>
 	</div>
