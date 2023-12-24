@@ -37,7 +37,6 @@
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<div in:fade={{ duration: 100, delay: 100 }} out:fade={{ duration: 200 }} class="modal_text">
 		<form
-			on:submit={handleSubmit}
 			action="/work?/form_data"
 			method="POST"
 			use:enhance
@@ -64,7 +63,11 @@
 				class="input text-white text-center input-bordered w-1/2 min-h-64"
 			/>
 			<div class="flex gap-4">
-				<button class="text-base btn btn-success px-4 py-2 rounded-lg" type="submit">Submit</button>
+				<button
+					on:submit={handleSubmit}
+					class="text-base btn btn-success px-4 py-2 rounded-lg"
+					type="submit">Submit</button
+				>
 				<button
 					id="close_button"
 					type="button"
